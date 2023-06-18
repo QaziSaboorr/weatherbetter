@@ -11,12 +11,16 @@ function Statsbox() {
         <div className="col my-3">
           <Card />
         </div>
+      </div>
+      <div className="row ">
         <div className="col my-3">
           <Card />
         </div>
         <div className="col my-3">
           <Card />
         </div>
+      </div>
+      <div className="row ">
         <div className="col my-3">
           <Card />
         </div>

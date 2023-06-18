@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Statsbox from "./components/Statsbox";
+import Navbar2 from "./components/Navbar2";
 import React, { useState } from "react";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   };
   return (
     <>
-      <Navbar city={city} fetch={fetch} UpdateCity={UpdateCity} />
+      <Navbar2 city={city} fetch={fetch} UpdateCity={UpdateCity} />
 
       <Main />
 
