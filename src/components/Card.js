@@ -1,14 +1,12 @@
 import React from "react";
 
-function Card() {
+function Card(props) {
   return (
     <div>
       <div className="card">
-        <div className="card-body">
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+        <div className="card-body text-center">
+          <h3>{props.header}</h3>
+          <h4 className="my-5">{props.info}</h4>
         </div>
       </div>
     </div>

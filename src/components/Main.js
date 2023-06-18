@@ -1,22 +1,20 @@
 import React from "react";
 
-function Main() {
-  const stylewidth = {
-    width: "50%",
-  };
-  const display = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  };
+function Main(props) {
+  let currentTemp = "loading";
+
+  console.log("ok");
+  if (props.ready === true) {
+    currentTemp = props.weatherinfo["main"]["temp"];
+  }
+
   return (
     <>
-      <div className="container my-5" style={display}>
-        <div className="card mb-3 " style={stylewidth}>
-          <div className="card-body">
-            <h2 className="card-title text-center">Current Temperature</h2>
-            <h4 className="card-title text-center">Temperature</h4>
-            <img src="..." className="card-img-top text-center" alt="..." />
+      <div>
+        <div className="card my-3">
+          <div className="card-body text-center">
+            <h1>Current Temperature</h1>
+            <h2>{currentTemp}</h2>
           </div>
         </div>
       </div>

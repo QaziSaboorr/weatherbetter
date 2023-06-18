@@ -5,7 +5,7 @@ function Navbar2(props) {
     props.UpdateCity(event.target.value);
   };
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/#">
           Weather Feather
@@ -34,23 +34,16 @@ function Navbar2(props) {
               </a>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex">
             <input
               className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
               value={props.city}
               onChange={(event) => updateValue(event)}
             />
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-              onClick={props.fetch}
-            >
-              Search city
-            </button>
           </form>
+          <button className="btn btn-primary " onClick={props.fetch}>
+            Search City
+          </button>
         </div>
       </div>
     </nav>
