@@ -1,15 +1,18 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function Navbar2(props) {
   const updateValue = (event) => {
     props.UpdateCity(event.target.value);
   };
+  let location = useLocation();
+  let path = location["pathname"];
   return (
     <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/#">
-          Weather Feather
-        </a>
+        <Link className="navbar-brand" to="/">
+          Weather Feather better
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,14 +27,21 @@ function Navbar2(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/#">
+              <Link
+                className={`nav-link ${path === "/" ? "active" : ""}`}
+                aria-current="page"
+                to="/"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
+              <Link
+                className={`nav-link ${path === "/About" ? "active" : ""}`}
+                to="/About"
+              >
                 About
-              </a>
+              </Link>
             </li>
           </ul>
           <form className="d-flex">
